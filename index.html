@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vocab Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <h1 id="game-title">Drag the correct word to the image</h1>
+    <img id="main-image" src="assets/title.jpeg" alt="Title" />
+    <div id="result" class="hidden">Result</div>
+
+    <div id="button-container">
+      <button id="start-button" class="fade">Start</button>
+      <div id="category-buttons" class="hidden fade">
+        <button data-category="colors">Colors</button>
+        <button data-category="fruits">Fruits</button>
+        <button data-category="vegetables">Vegetables</button>
+      </div>
+      <div id="word-buttons" class="hidden fade"></div>
+      <div id="score-display" class="hidden fade"></div>
+      <button id="restart-button" class="hidden fade">Restart</button>
+    </div>
+  </div>
+
+  <!-- Audios -->
+  <audio id="correct-sound" src="sounds/success.mp3"></audio>
+  <audio id="wrong-sound" src="sounds/error.mp3"></audio>
+  <audio id="finish-sound" src="sounds/finish.mp3"></audio>
+  <audio id="button-sound" src="sounds/button.mp3"></audio>
+  <audio id="category-sound"></audio>
+  <audio id="word-sound"></audio>
+  <audio id="gameloop-sound" src="sounds/gameloop.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
