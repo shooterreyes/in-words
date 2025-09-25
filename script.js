@@ -3,7 +3,13 @@ const categories = {
   fruits: ["apple", "banana", "orange", "strawberry", "grape", "pineapple", "watermelon"],
   vegetables: ["carrot", "tomato", "potato", "broccoli", "lettuce", "cucumber"]
 };
-
+function preloadImages() {
+  Object.values(categories).flat().forEach(word => {
+    let imageName = word;
+    if (currentCategory === "fruits" && word === "orange") imageName = "oranged";
+    const img = new Image();
+    img.src = assets/${imageName}.jpeg;
+  });
 let currentCategory = "";
 let currentIndex = 0;
 let correctCount = 0;
@@ -60,6 +66,7 @@ categoryButtons.querySelectorAll("button").forEach(btn => {
     buttonSound.play();
 
     currentCategory = btn.dataset.category;
+    preloadImages();
     currentIndex = 0;
     correctCount = 0;
     errorCount = 0;
