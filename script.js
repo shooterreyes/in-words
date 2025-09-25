@@ -49,6 +49,7 @@ function hideWithFade(element) {
 // Inicio del juego
 startButton.addEventListener("click", () => {
   hideWithFade(startButton);
+  hideWithFade(imageElement);
   showWithFade(categoryButtons);
 });
 
