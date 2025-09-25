@@ -8,7 +8,7 @@ function preloadImages() {
     let imageName = word;
     if (currentCategory === "fruits" && word === "orange") imageName = "oranged";
     const img = new Image();
-    img.src = assets/${imageName}.jpeg;
+    img.src = 'assets/${imageName}.jpeg';
 });
 }
 let currentCategory = "";
