@@ -1,4 +1,3 @@
-/* General layout */
 body {
   margin: 0;
   padding: 0;
@@ -16,35 +15,21 @@ body {
   width: 100%;
 }
 
-/* Title */
 #game-title {
   font-size: 1.5em;
   color: #2c6fa3;
   margin-bottom: 10px;
 }
 
-/* Image container to prevent layout shift */
-#image-container {
-  width: 100%;
-  min-height: 270px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Main image */
 #main-image {
   width: 250px;
   height: 250px;
-  object-fit: contain;
-  display: block;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   margin-bottom: 20px;
-  transition: opacity 0.3s ease;
 }
 
-/* Buttons */
 #start-button,
 #category-buttons button,
 #restart-button {
@@ -67,7 +52,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Word buttons */
 #word-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -93,7 +77,6 @@ body {
   box-shadow: 0 6px 10px rgba(0,0,0,0.2);
 }
 
-/* Result and score */
 #result {
   font-size: 1.5em;
   font-weight: bold;
@@ -107,7 +90,6 @@ body {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
-/* Transitions and visibility */
 .fade {
   opacity: 0;
   transform: scale(0.95);
@@ -121,38 +103,4 @@ body {
 
 .hidden {
   display: none !important;
-}
-
-.show {
-  opacity: 1;
-  display: block;
-}
-
-/* Category buttons layout */
-.category-row {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.category-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.category-button img {
-  width: 200px;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.category-button:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
